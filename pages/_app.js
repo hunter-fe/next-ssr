@@ -1,7 +1,7 @@
-import '../styles/globals.css'
+import { withFronteggApp } from '@frontegg/nextjs';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function CustomApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default withFronteggApp(CustomApp, {hostedLoginBox: true});
